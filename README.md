@@ -91,5 +91,5 @@ Ali Nix | [![LinkedIn][linkedin-shield]][linkedin-url1]
 [Express-shield]: https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white
 [NodeJS-shield]: https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white
 [JavaScript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black
-[Knex-shield]: "https://img.shields.io/badge/Knex.js-D26B38.svg?style=for-the-badge&logo=knexdotjs&logoColor=white"
+[Knex-shield]: https://img.shields.io/badge/Knex.js-D26B38.svg?style=for-the-badge&logo=knexdotjs&logoColor=white
 [Stripe-shield]: https://img.shields.io/badge/Stripe-635BFF.svg?style=for-the-badge&logo=Stripe&logoColor=white
