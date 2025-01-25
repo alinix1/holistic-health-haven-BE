@@ -4,12 +4,12 @@ const mockStates = require("./mockData/statesData.js");
 
 /* --------------GET ALL STATES------------- */
 
-router.get("/", async (req, res) => {
+router.get("/", async (request, response) => {
   try {
-    res.status(200).json(mockStates);
+    response.status(200).json(mockStates);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Server error" });
+    response.status(500).json({ error: "Server error" });
   }
 });
 

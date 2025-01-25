@@ -4,19 +4,19 @@ const mockReviews = require("./mockData/reviewsData.js");
 
 /* --------------GET ALL REVIEWS BY CUSTOMERS------------- */
 
-router.get("/", async (req, res) => {
+router.get("/", async (request, response) => {
   try {
-    res.status(200).json(mockReviews);
+    response.status(200).json(mockReviews);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Server error" });
+    response.status(500).json({ error: "Server error" });
   }
 });
 
 /* --------------POST A NEW REVIEW------------- */
 
-router.post("/", async (req, res) => {
-  const newReview = req.body;
+router.post("/", async (request, response) => {
+  const newReview = request.body;
 
   for (let requiredParameter of [
     "id",
@@ -25,18 +25,18 @@ router.post("/", async (req, res) => {
     "user_review",
   ]) {
     if (!newReview[requiredParameter]) {
-      return res
-        .status(400)
+      return response
+        .status(422)
         .json({ error: `Missing ${requiredParameter} in request body` });
     }
   }
 
   try {
     mockReviews.push(newReview);
-    res.status(201).json(newReview);
+    response.status(201).json(newReview);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Server error" });
+    response.status(500).json({ error: "Server error" });
   }
 });
 module.exports = router;
