@@ -19,7 +19,7 @@ let productsData = [
       "Stress & Anxiety",
       "Fibromyalgia",
     ],
-    product_title: "CBD salve",
+    product_title: "CBD Salve",
     img: "https://www.shutterstock.com/image-photo/hemp-salve-joints-muscles-relaxing-600nw-1793404621.jpg",
     product_description:
       "Experience soothing relief with this anti-inflammatory CBD salve, designed to help de-stress and promote muscle relaxation. Comes in a convenient 2 oz jar, perfect for targeted application. Apply a small amount to the affected area as needed. Potential side effects may include mild skin irritation; discontinue use if irritation occurs.",
@@ -28,7 +28,7 @@ let productsData = [
   {
     id: 3,
     product_type: ["Stress & Anxiety", "Fibromyalgia", "Muscle Recovery"],
-    product_title: "Epsom salts",
+    product_title: "Epsom Salts",
     img: "https://hips.hearstapps.com/hmg-prod/images/handmade-lavender-soap-and-salt-royalty-free-image-1625928611.jpg?crop=0.736xw:1.00xh;0.0609xw,0&resize=640:*",
     product_description:
       "Unwind and relax with these premium Epsom salts, enriched with the calming properties of lavender and rose petals. Perfect for de-stressing and soothing tired muscles, this 16 oz package creates a luxurious bath experience. Add 1-2 cups to a warm bath and soak for 20 minutes to maximize benefits. Potential side effects may include mild skin irritation; discontinue use if irritation occurs.",
@@ -77,7 +77,7 @@ let productsData = [
   {
     id: 8,
     product_type: ["Liver Problems", "Gut Problems", "Low Energy"],
-    product_title: "Milk thistle",
+    product_title: "Milk Thistle",
     img: "https://files.nccih.nih.gov/milk-thistle-thinkstockphotos-93966680-square-1-.jpg",
     product_description:
       "Milk thistle is a herbal supplement commonly used for liver support, detoxification, and promoting overall digestive health. This product comes in a bottle containing 90 capsules, with each capsule providing 300 mg of milk thistle extract standardized to include silymarin, its active ingredient. The recommended dose is one to two capsules daily, preferably taken with meals for optimal absorption. While milk thistle is generally safe for most people, potential side effects may include mild digestive upset, nausea, or bloating. Rarely, allergic reactions such as skin rash or itching may occur, particularly in individuals allergic to plants in the Asteraceae family (e.g., daisies, marigolds, ragweed). Those who are pregnant, breastfeeding, or on medications should consult a healthcare professional before use.",
@@ -99,7 +99,7 @@ let productsData = [
   {
     id: 10,
     product_type: ["Bacterial & Fungal Infections"],
-    product_title: "Tea tree oil",
+    product_title: "Tea Tree Oil",
     img: "https://static1.squarespace.com/static/55240cbae4b0fe3c2af506f6/5533720be4b0cb1542aa8512/5f2bdeb00be1946932ec0d8d/1710527700052/Tea+Tree+Leaves+and+Tea+Tree+Oil.jpeg?format=1500w",
     product_description:
       "Tea tree oil is a natural essential oil known for its antimicrobial, antifungal, and wound-healing properties. It is typically sold in small glass bottles containing 10–15 mL of 100% pure tea tree oil, often equipped with a dropper for precise application. The recommended dose depends on its use; for skin application, dilute a few drops in a carrier oil (such as coconut or jojoba oil) before applying to avoid irritation. For aromatherapy, add a few drops to a diffuser or steam inhalation. Potential side effects of tea tree oil include skin irritation, redness, or an allergic reaction, particularly if used undiluted. It should not be ingested, as it can be toxic if swallowed. Pregnant individuals, children, or those with sensitive skin should consult a healthcare professional before using tea tree oil.",
@@ -117,7 +117,7 @@ let productsData = [
   {
     id: 12,
     product_type: ["Insomnia", "Stress & Anxiety"],
-    product_title: "Valerian root",
+    product_title: "Valerian Root",
     img: "https://cdn-prod.medicalnewstoday.com/content/images/articles/318/318088/valerian-root.jpg",
     product_description:
       "Valerian root is an herbal supplement derived from the roots of the Valeriana officinalis plant, traditionally used for centuries to promote relaxation, improve sleep quality, and reduce anxiety and stress. Commonly available in forms such as capsules, tablets, tinctures, and teas, it is often taken in doses of 300 to 600 mg for sleep disturbances about 30 minutes to 2 hours before bedtime or 150 to 300 mg once or twice daily for anxiety or stress relief. As a tea, 1-2 teaspoons of dried valerian root can be steeped in hot water for 5-10 minutes. While generally considered safe for short-term use, potential side effects include drowsiness, dizziness, headaches, vivid dreams, or mild digestive discomfort, and it is not recommended for pregnant or breastfeeding women. Valerian root may interact with sedatives, antidepressants, or other medications affecting the central nervous system, so consulting a healthcare provider before use is advised. Though effective for many, it should be used cautiously due to its sedative properties, and long-term use is not well-studied.",
@@ -206,6 +206,51 @@ let productsData = [
     img: "https://media.istockphoto.com/id/497124680/photo/pills-with-zinc-zn-element-dietary-supplements-vitamin-capsules.jpg?s=612x612&w=0&k=20&c=V9jK2Gvrf_mblyT80LrjbZ2UPlWDbqpJn2h53mUZmgE=",
     product_description:
       "Zinc is an essential mineral that plays a vital role in various physiological functions, including supporting immune system health, aiding in wound healing, promoting proper growth and development, and facilitating enzymatic reactions in the body. It is commonly used as a dietary supplement to help prevent or address zinc deficiencies, boost immune response, and reduce the duration of colds. The recommended daily dosage for zinc varies based on age and gender, but for adults, the typical dose ranges from 8 to 11 milligrams per day. Zinc supplements are often available in forms such as zinc gluconate, zinc sulfate, or zinc acetate. Potential side effects of zinc supplementation include nausea, vomiting, diarrhea, and stomach discomfort, especially when taken on an empty stomach or in high doses. Excessive zinc intake can lead to copper deficiency, weakened immune function, and imbalances in other minerals, so it’s important to adhere to recommended dosages and consult with a healthcare professional if needed.",
+    price: 15.0,
+  },
+  {
+    id: 21,
+    product_type: ["Stress & Anxiety", "Muscle Recovery", "Fibromyalgia"],
+    product_title: "Magnesium",
+    img: "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2120x1415+0+0/resize/1100/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F9a%2F44%2Fe6971c4f4c25849c5547317023da%2Fgettyimages-1457404483.jpg",
+    product_description:
+      "Magnesium is an essential mineral that plays a vital role in many bodily functions, including muscle and nerve function, blood sugar regulation, and energy production. The recommended daily dosage for adults typically ranges from about 310 to 420 milligrams, depending on factors like age, sex, and overall health. Magnesium supplements come in several forms—such as magnesium citrate, oxide, or glycinate—which differ in terms of absorption and potential gastrointestinal tolerance. Common side effects of supplementation, particularly at higher doses, can include diarrhea, stomach cramps, and nausea. In rare cases, excessive magnesium intake can lead to more serious issues like an irregular heartbeat or low blood pressure, especially in individuals with kidney dysfunction. It is advisable to consult a healthcare provider before beginning magnesium supplementation, especially if you have existing medical conditions or are taking other medications that might interact with magnesium.",
+    price: 15.0,
+  },
+  {
+    id: 22,
+    product_type: [""],
+    product_title: "Fish Oil",
+    img: "https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/13455207/shutterstock_1232669710.jpg?quality=90&strip=all&crop=4.2350782306355%2C0%2C91.529843538729%2C100&w=2400",
+    product_description:
+      "Fish oil is a popular supplement rich in omega-3 fatty acids, primarily eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), which support cardiovascular health, reduce inflammation, and promote brain function. Commonly recommended dosages for general health range from 250 to 1,000 milligrams per day, though therapeutic doses for specific conditions might be higher—always consult a healthcare provider for personalized advice. While fish oil is generally safe, some individuals may experience side effects such as fishy aftertaste, belching, gastrointestinal discomfort, or loose stools. In high doses, there is also a risk of increased bleeding, especially if combined with blood-thinning medications. As with any supplement, it’s important to choose high-quality products that are purified to remove contaminants and to discuss with a healthcare professional before starting a new regimen.",
+    price: 23.0,
+  },
+  {
+    id: 23,
+    product_type: ["Low Energy", "Overall Immunity"],
+    product_title: "Iron",
+    img: "https://www.healthcastle.com/wp-content/uploads/2014/08/iron_pills.jpg",
+    product_description:
+      "Iron supplements are commonly used to treat or prevent iron deficiency and anemia. The typical adult dosage varies from 60 to 200 milligrams of elemental iron per day, depending on the severity of the deficiency and individual needs, but it's essential to follow a healthcare provider's recommendations since too much iron can be harmful. Common forms include ferrous sulfate, ferrous fumarate, and ferrous gluconate, each differing in elemental iron content and gastrointestinal tolerance. Side effects of iron supplements may include constipation, nausea, stomach upset, and darkened stools. In some cases, especially at high doses or with prolonged use, iron supplementation can lead to more serious issues such as iron overload, which can damage organs like the liver and heart. It is recommended to take iron supplements on an empty stomach for better absorption, though this may increase gastrointestinal discomfort, so taking them with food (while possibly reducing absorption) is an option for those who experience significant side effects. Always consult a healthcare professional before starting iron supplementation to ensure proper dosing and monitoring.",
+    price: 21.0,
+  },
+  {
+    id: 24,
+    product_type: ["Muscle Recovery"],
+    product_title: "Whey Protein",
+    img: "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/b8f20ba454daac59-XJWFh3d0-large.jpg",
+    product_description:
+      "Whey protein is a high-quality protein derived from milk that is popular among athletes, fitness enthusiasts, and those looking to supplement their daily protein intake. It is typically consumed in powder form and can be mixed with water, milk, or added to smoothies. The common serving size is around 20–30 grams per serving, with many individuals consuming one to two servings per day depending on their protein requirements, activity level, and overall dietary intake. While whey protein is generally safe for most people, possible side effects may include digestive discomfort such as bloating, gas, or diarrhea—especially in those with lactose intolerance, though many whey protein isolates have reduced lactose content. In rare cases, high protein intake may stress the kidneys over time, so it's advisable for individuals with existing kidney conditions to consult a healthcare professional before use. As with any supplement, it’s best to choose a reputable product and use it as part of a balanced diet to support overall health and muscle recovery.",
+    price: 45.0,
+  },
+  {
+    id: 25,
+    product_type: ["Stress & Anxiety"],
+    product_title: "Lavendar Oil",
+    img: "https://cdn.shopify.com/s/files/1/0648/1955/files/oil_from_lavender.jpg",
+    product_description:
+      "Lavender oil is a popular essential oil widely used for its calming and soothing properties, often employed in aromatherapy, topical applications, and massage blends. For aromatherapy, typically 3–5 drops are added to a diffuser per session, while for topical use it is crucial to dilute it in a carrier oil—usually to a 1–2% concentration—to minimize the risk of skin irritation. Although generally safe when used appropriately, some individuals may experience side effects such as skin irritation, allergic reactions, or photosensitivity. Ingestion of undiluted lavender oil is not recommended due to potential toxicity, and those with sensitive skin or specific health conditions should perform a patch test or consult a healthcare professional before use. As with any essential oil, proper usage and dilution are key to enjoying its benefits safely.",
     price: 15.0,
   },
 ];
