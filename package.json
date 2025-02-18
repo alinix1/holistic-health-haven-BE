@@ -8,7 +8,7 @@
     "url": "git+https://github.com/alinix1/holistic-health-haven-BE.git"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=18.x"
   },
   "scripts": {
     "start": "node index.js",
@@ -26,7 +26,8 @@
     "knex": "^3.1.0",
     "make-runnable": "^1.4.1",
     "pg": "^8.11.3",
-    "postgres": "^3.4.3"
+    "postgres": "^3.4.3",
+    "stripe": "^17.6.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
