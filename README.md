@@ -14,9 +14,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Installation</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#roadmap">Acknowledgments</a></li>
+    <li><a href="#setup">Installation</a></li>
+    <li><a href="#database">Database Schema</a></li>
+    <li><a href="#routes">Routes</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -25,6 +25,8 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project / App
+
+The Holistic Health Haven backend is a REST API built with Express, Knex, and a PostgreSQL database to serve data to the frontend. It also integrates with Stripe's API to process one-time payments.
 
 ### Built With
 
@@ -42,38 +44,39 @@
 ## Setup
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. <strong>Clone down backend repository:</strong>
 
-<!-- INSTALLATION -->
+```
+git clone https://github.com/alinix1/holistic-health-haven-BE.git
+```
 
-## Installation
+2. <strong>Install npm packages & start server:</strong>
 
-<!-- USAGE -->
+`npm install` or `npm i`
 
-## Usage
+`node index.js`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- DATABASE -->
 
-<!-- NOTES -->
-
-## Notes
-
-## Feature Overview
-
-## Wins:
-
-## Challenges:
+## Database Schema
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
+<img width="255" alt="Screenshot 2025-03-04 at 6 32 30 PM" src="https://gist.github.com/user-attachments/assets/d2af7eb0-f720-4576-b6ea-9e159faaab67" />
 
-## Roadmap
+<!-- ROUTES -->
 
-<!-- ACKNOWLEDGMENTS -->
+## Routes
 
-## Acknowledgments
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Used the following resources during the project:
+| Routes                 | HTTP Methods | Description                                       |
+| ---------------------- | ------------ | ------------------------------------------------- |
+| /products              | GET          | display all holistic products                     |
+| /products/:id          | GET          | display a specific holistic product, given its id |
+| /reviews               | GET          | display all reviews                               |
+| /reviews               | POST         | updates or adds a review from a customer          |
+| /create-payment-intent | POST         | initiates payment with Stripe                     |
 
 <!-- CONTACT -->
 
