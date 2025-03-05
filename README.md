@@ -28,7 +28,7 @@
 
 The Holistic Health Haven backend is a REST API built with Express, Knex, and a PostgreSQL database to serve data to the frontend. It also integrates with Stripe's API to process one-time payments.
 
-### Built With
+## Built With
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,7 +62,7 @@ git clone https://github.com/alinix1/holistic-health-haven-BE.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<img width="255" alt="Screenshot 2025-03-04 at 6 32 30 PM" src="https://gist.github.com/user-attachments/assets/d2af7eb0-f720-4576-b6ea-9e159faaab67" />
+![Image](https://github.com/user-attachments/assets/b929fdc3-cfe8-49b0-84a3-7fd366fec89e)
 
 <!-- ROUTES -->
 
