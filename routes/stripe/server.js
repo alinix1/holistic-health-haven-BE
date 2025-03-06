@@ -4,7 +4,6 @@ require("dotenv").config();
 
 // initialize stripe
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-console.log("Stripe Secret Key:", process.env.STRIPE_SECRET_KEY);
 
 // endpoint to obtain publishable key
 router.get("/config", (_, response) => {
@@ -33,7 +32,7 @@ router.post("/create-payment-intent", async (request, response) => {
       .status(200)
       .json({ clientSecret: paymentIntent.client_secret });
   } catch (error) {
-    console.log("Error creating payment intent: ", error);
+    console.error("Error creating payment intent: ", error);
 
     if (error.type === "StripeInvalidRequestError") {
       return response.status(400).json({ error: error.message });
