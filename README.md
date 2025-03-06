@@ -38,6 +38,7 @@ The Holistic Health Haven backend is a REST API built with Express, Knex, and a 
 - ![JavaScript][JavaScript-shield]
 - ![Knex][Knex-shield]
 - ![Stripe][Stripe-shield]
+- ![Postman][Postman-shield]
 
 <!-- SETUP -->
 
@@ -96,3 +97,4 @@ Ali Nix | [![LinkedIn][linkedin-shield]][linkedin-url1]
 [JavaScript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black
 [Knex-shield]: https://img.shields.io/badge/Knex.js-D26B38.svg?style=for-the-badge&logo=knexdotjs&logoColor=white
 [Stripe-shield]: https://img.shields.io/badge/Stripe-635BFF.svg?style=for-the-badge&logo=Stripe&logoColor=white
+[Postman-shield]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white
