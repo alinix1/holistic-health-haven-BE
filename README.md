@@ -15,6 +15,7 @@
       </ul>
     </li>
     <li><a href="#setup">Installation</a></li>
+    <li><a href="#successes">Wins and Challenges</a></li>
     <li><a href="#database">Database Schema</a></li>
     <li><a href="#routes">Routes</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -39,6 +40,7 @@ The Holistic Health Haven backend is a REST API built with Express, Knex, and a 
 - ![Knex][Knex-shield]
 - ![Stripe][Stripe-shield]
 - ![Postman][Postman-shield]
+- ![AWS][AWS-shield]
 
 <!-- SETUP -->
 
@@ -56,6 +58,18 @@ git clone https://github.com/alinix1/holistic-health-haven-BE.git
 `npm install` or `npm i`
 
 `node index.js`
+
+<!-- SUCCESSES -->
+
+## Wins:
+
+- Successfully designed and implemented a relational database with PostgreSQL
+- Developed RESTful API routes with Express for seamless data retrieval and manipulation
+- Integrated Stripe payment processing API
+
+## Challenges:
+
+- Configuring AWS Elastic Beanstalk for deployment
 
 <!-- DATABASE -->
 
@@ -98,3 +112,4 @@ Ali Nix | [![LinkedIn][linkedin-shield]][linkedin-url1]
 [Knex-shield]: https://img.shields.io/badge/Knex.js-D26B38.svg?style=for-the-badge&logo=knexdotjs&logoColor=white
 [Stripe-shield]: https://img.shields.io/badge/Stripe-635BFF.svg?style=for-the-badge&logo=Stripe&logoColor=white
 [Postman-shield]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white
+[AWS-shield]: https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white
