@@ -27,7 +27,7 @@
 
 ## About The Project / App
 
-The Holistic Health Haven backend is a REST API built with Express, Knex, and a PostgreSQL database to serve data to the frontend. It also integrates with Stripe's API to process one-time payments.
+The Holistic Health Haven backend is a REST API built with Express, Knex, and a PostgreSQL database to serve data to the frontend. It integrates with Stripe's API to process one-time payments and implements image optimization with WebP conversion utilizing the library called Sharp.
 
 ## Built With
 
@@ -35,6 +35,7 @@ The Holistic Health Haven backend is a REST API built with Express, Knex, and a 
 
 - ![PostgreSQL][PostgreSQL-shield]
 - ![Express][Express-shield]
+- ![Sharp][Sharp-shield]
 - ![NodeJS][NodeJS-shield]
 - ![JavaScript][JavaScript-shield]
 - ![Knex][Knex-shield]
@@ -64,11 +65,12 @@ git clone https://github.com/alinix1/holistic-health-haven-BE.git
 ## Wins:
 
 - Successfully designed and implemented a relational database with PostgreSQL
-- Developed RESTful API routes with Express for seamless data retrieval and manipulation
+- Developed RESTful API routes with Express
 - Integrated Stripe payment processing API
 
 ## Challenges:
 
+- Researching and implementing image optimization with WebP conversion from PNG/JPG using the Sharp library
 - Configuring AWS Elastic Beanstalk for deployment
 
 <!-- DATABASE -->
@@ -107,6 +109,7 @@ Ali Nix | [![LinkedIn][linkedin-shield]][linkedin-url1]
 [linkedin-url1]: https://www.linkedin.com/in/ali-nix-38b9b9126/
 [PostgreSQL-shield]: https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white
 [Express-shield]: https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white
+[Sharp-shield]: https://img.shields.io/badge/sharp-99CC00.svg?style=for-the-badge&logo=sharp&logoColor=white
 [NodeJS-shield]: https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white
 [JavaScript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black
 [Knex-shield]: https://img.shields.io/badge/Knex.js-D26B38.svg?style=for-the-badge&logo=knexdotjs&logoColor=white
