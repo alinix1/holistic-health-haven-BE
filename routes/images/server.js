@@ -55,46 +55,18 @@ router.get("/optimize", async (request, response) => {
       return response.sendFile(cachePath);
     }
 
+    // Get image buffer based on source
     let imageBuffer;
-
-    if (source === "db") {
-      // Get image from database
-      const image = await database("images").where("id", id).first();
-      if (!image) return response.status(404).send("Image not found");
-      imageBuffer = image.data;
-    } else if (source === "static") {
-      // Try to get from backend static files
-      const staticPath = path.join(__dirname, "../../public/assets", id);
-
-      if (!fs.existsSync(staticPath)) {
-        // Try with a different extension if the exact filename doesn't exist
-        const fileNameWithoutExt = id.split(".")[0];
-        // Extract filename without extension
-        const possibleExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
-        let foundPath = null;
-
-        for (const ext of possibleExtensions) {
-          const alternativePath = path.join(
-            __dirname,
-            "../../public/assets",
-            `${fileNameWithoutExt}${ext}`
-          );
-          if (fs.existsSync(alternativePath)) {
-            foundPath = alternativePath;
-            break;
-          }
-        }
-
-        if (!foundPath) {
-          return response.status(404).send("Static image not found");
-        }
-
-        imageBuffer = fs.readFileSync(foundPath);
+    try {
+      if (source === "db") {
+        imageBuffer = await getDbImage(id);
+      } else if (source === "static") {
+        imageBuffer = getStaticImage(id);
       } else {
-        imageBuffer = fs.readFileSync(staticPath);
+        return response.status(400).send("Invalid source parameter");
       }
-    } else {
-      return response.status(400).send("Invalid source parameter");
+    } catch (error) {
+      return response.status(404).send(error.message);
     }
 
     // Process with Sharp
