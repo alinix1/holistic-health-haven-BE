@@ -10,6 +10,38 @@ if (!fs.existsSync(cacheDir)) {
   fs.mkdirSync(cacheDir, { recursive: true });
 }
 
+// get image from database
+async function getDbImage(id) {
+  const image = await database("images").where("id", id).first();
+  if (!image) throw new Error("Image not found");
+  return image.data;
+}
+
+// get image from static files
+function getStaticImage(id) {
+  const staticPath = path.join(__dirname, "../../public/assets", id);
+
+  if (fs.existsSync(staticPath)) {
+    return fs.readFileSync(staticPath);
+  }
+
+  // Using different file extensions
+  const fileNameWithoutExt = id.split(".")[0];
+  const possibleExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
+
+  for (const ext of possibleExtensions) {
+    const alternativePath = path.join(
+      __dirname,
+      "../../public/assets",
+      `${fileNameWithoutExt}${ext}`
+    );
+    if (fs.existsSync(alternativePath)) {
+      return fs.readFileSync(alternativePath);
+    }
+  }
+  throw new Error("Static image not found");
+}
+
 router.get("/optimize", async (request, response) => {
   try {
     const { source, id, width = 800, quality = 80 } = request.query;
