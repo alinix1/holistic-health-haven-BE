@@ -19,26 +19,38 @@ async function getDbImage(id) {
 
 // get image from static files
 function getStaticImage(id) {
-  const staticPath = path.join(__dirname, "../../public/assets", id);
+  const rootDir = process.cwd();
 
-  if (fs.existsSync(staticPath)) {
-    return fs.readFileSync(staticPath);
-  }
+  // Define base directories to check
+  const baseDirs = [
+    path.join(rootDir, "public/assets/static"),
+    path.join(rootDir, "public/assets/products"),
+    path.join(rootDir, "public/assets"),
+  ];
 
-  // Using different file extensions
+  // Extract base filename without extension
   const fileNameWithoutExt = id.split(".")[0];
-  const possibleExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
 
-  for (const ext of possibleExtensions) {
-    const alternativePath = path.join(
-      __dirname,
-      "../../public/assets",
-      `${fileNameWithoutExt}${ext}`
-    );
-    if (fs.existsSync(alternativePath)) {
-      return fs.readFileSync(alternativePath);
+  // Include original extension in possible extensions
+  const originalExt = id.includes(".") ? "." + id.split(".").pop() : "";
+  const possibleExtensions = [
+    originalExt,
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp",
+  ].filter((ext) => ext !== "");
+
+  // Check all directories with all possible extensions
+  for (const baseDir of baseDirs) {
+    for (const ext of possibleExtensions) {
+      const alternativePath = path.join(baseDir, `${fileNameWithoutExt}${ext}`);
+      if (fs.existsSync(alternativePath)) {
+        return fs.readFileSync(alternativePath);
+      }
     }
   }
+
   throw new Error("Static image not found");
 }
 
