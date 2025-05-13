@@ -78,11 +78,9 @@ router.get("/optimize", async (request, response) => {
     // Save to cache
     fs.writeFileSync(cachePath, optimizedBuffer);
 
-    // Set headers
+    // Set headers and send response
     response.set("Content-Type", "image/webp");
     response.set("Cache-Control", "public, max-age=31536000");
-
-    // Send response
     response.send(optimizedBuffer);
   } catch (error) {
     console.error("Error optimizing image:", error);
