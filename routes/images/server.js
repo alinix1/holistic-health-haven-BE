@@ -10,6 +10,50 @@ if (!fs.existsSync(cacheDir)) {
   fs.mkdirSync(cacheDir, { recursive: true });
 }
 
+// get image from database
+async function getDbImage(id) {
+  const image = await database("images").where("id", id).first();
+  if (!image) throw new Error("Image not found");
+  return image.data;
+}
+
+// get image from static files
+function getStaticImage(id) {
+  const rootDir = process.cwd();
+
+  // Define base directories to check
+  const baseDirs = [
+    path.join(rootDir, "public/assets/static"),
+    path.join(rootDir, "public/assets/products"),
+    path.join(rootDir, "public/assets"),
+  ];
+
+  // Extract base filename without extension
+  const fileNameWithoutExt = id.split(".")[0];
+
+  // Include original extension in possible extensions
+  const originalExt = id.includes(".") ? "." + id.split(".").pop() : "";
+  const possibleExtensions = [
+    originalExt,
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp",
+  ].filter((ext) => ext !== "");
+
+  // Check all directories with all possible extensions
+  for (const baseDir of baseDirs) {
+    for (const ext of possibleExtensions) {
+      const alternativePath = path.join(baseDir, `${fileNameWithoutExt}${ext}`);
+      if (fs.existsSync(alternativePath)) {
+        return fs.readFileSync(alternativePath);
+      }
+    }
+  }
+
+  throw new Error("Static image not found");
+}
+
 router.get("/optimize", async (request, response) => {
   try {
     const { source, id, width = 800, quality = 80 } = request.query;
@@ -23,46 +67,18 @@ router.get("/optimize", async (request, response) => {
       return response.sendFile(cachePath);
     }
 
+    // Get image buffer based on source
     let imageBuffer;
-
-    if (source === "db") {
-      // Get image from database
-      const image = await database("images").where("id", id).first();
-      if (!image) return response.status(404).send("Image not found");
-      imageBuffer = image.data;
-    } else if (source === "static") {
-      // Try to get from backend static files
-      const staticPath = path.join(__dirname, "../../public/assets", id);
-
-      if (!fs.existsSync(staticPath)) {
-        // Try with a different extension if the exact filename doesn't exist
-        const fileNameWithoutExt = id.split(".")[0];
-        // Extract filename without extension
-        const possibleExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
-        let foundPath = null;
-
-        for (const ext of possibleExtensions) {
-          const alternativePath = path.join(
-            __dirname,
-            "../../public/assets",
-            `${fileNameWithoutExt}${ext}`
-          );
-          if (fs.existsSync(alternativePath)) {
-            foundPath = alternativePath;
-            break;
-          }
-        }
-
-        if (!foundPath) {
-          return response.status(404).send("Static image not found");
-        }
-
-        imageBuffer = fs.readFileSync(foundPath);
+    try {
+      if (source === "db") {
+        imageBuffer = await getDbImage(id);
+      } else if (source === "static") {
+        imageBuffer = getStaticImage(id);
       } else {
-        imageBuffer = fs.readFileSync(staticPath);
+        return response.status(400).send("Invalid source parameter");
       }
-    } else {
-      return response.status(400).send("Invalid source parameter");
+    } catch (error) {
+      return response.status(404).send(error.message);
     }
 
     // Process with Sharp
@@ -74,11 +90,9 @@ router.get("/optimize", async (request, response) => {
     // Save to cache
     fs.writeFileSync(cachePath, optimizedBuffer);
 
-    // Set headers
+    // Set headers and send response
     response.set("Content-Type", "image/webp");
     response.set("Cache-Control", "public, max-age=31536000");
-
-    // Send response
     response.send(optimizedBuffer);
   } catch (error) {
     console.error("Error optimizing image:", error);
