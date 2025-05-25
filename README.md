@@ -16,6 +16,7 @@
     </li>
     <li><a href="#setup">Installation</a></li>
     <li><a href="#successes">Wins and Challenges</a></li>
+    <li><a href="#backend">Backend Architecture</a></li>
     <li><a href="#database">Database Schema</a></li>
     <li><a href="#routes">Routes</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -72,6 +73,14 @@ git clone https://github.com/alinix1/holistic-health-haven-BE.git
 
 - Researching and implementing image optimization with WebP conversion from PNG/JPG using the Sharp library
 - Configuring AWS Elastic Beanstalk for deployment
+
+<!-- BACKEND -->
+
+## Backend Architecture
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+![Image](https://github.com/user-attachments/assets/0f65376a-1390-46a7-8c9d-1de5c120c5ca)
 
 <!-- DATABASE -->
 
