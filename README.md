@@ -19,6 +19,7 @@
     <li><a href="#backend">Backend Architecture</a></li>
     <li><a href="#database">Database Schema</a></li>
     <li><a href="#routes">Routes</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -103,6 +104,16 @@ git clone https://github.com/alinix1/holistic-health-haven-BE.git
 | /reviews               | GET          | display all reviews                               |
 | /reviews               | POST         | updates or adds a review from a customer          |
 | /create-payment-intent | POST         | initiates payment with Stripe                     |
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+- [ ] AWS deployment
+- [ ] Database schema updates for users and orders
+- [ ] User authentication APIs
+- [ ] Order management APIs
+- [ ] Email notification service
 
 <!-- CONTACT -->
 
