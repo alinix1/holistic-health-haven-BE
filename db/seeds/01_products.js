@@ -75,7 +75,7 @@ exports.seed = async function (knex) {
     {
       id: 7,
       product_type: knex.raw("?::TEXT[]", [
-        ["Inflammation & Joint pain", "Overall Immunity"],
+        ["Inflammation & Joint Pain", "Overall Immunity"],
       ]),
       product_title: "Turmeric",
       img: "https://media.istockphoto.com/id/965503302/photo/turmeric-powder-and-roots.jpg?s=612x612&w=0&k=20&c=97n0pa3_llc9itGE-nlUJEz5vWwowjA3FF2rNByQmIQ=",
@@ -257,7 +257,7 @@ exports.seed = async function (knex) {
     {
       id: 25,
       product_type: knex.raw("?::TEXT[]", [["Stress & Anxiety"]]),
-      product_title: "Lavendar Oil",
+      product_title: "Lavender Oil",
       img: "https://cdn.shopify.com/s/files/1/0648/1955/files/oil_from_lavender.jpg",
       product_description:
         "Lavender oil is a popular essential oil widely used for its calming and soothing properties, often employed in aromatherapy, topical applications, and massage blends. For aromatherapy, typically 3–5 drops are added to a diffuser per session, while for topical use it is crucial to dilute it in a carrier oil—usually to a 1–2% concentration—to minimize the risk of skin irritation. Although generally safe when used appropriately, some individuals may experience side effects such as skin irritation, allergic reactions, or photosensitivity. Ingestion of undiluted lavender oil is not recommended due to potential toxicity, and those with sensitive skin or specific health conditions should perform a patch test or consult a healthcare professional before use. As with any essential oil, proper usage and dilution are key to enjoying its benefits safely.",
