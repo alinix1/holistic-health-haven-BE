@@ -29,7 +29,7 @@
 
 ## About The Project / App
 
-The Holistic Health Haven backend is a REST API built with Express, Knex, and a PostgreSQL database to serve data to the frontend. It integrates with Stripe's API to process one-time payments and implements image optimization with WebP conversion utilizing the library called Sharp.
+The Holistic Health Haven backend is a REST API built with Express, Knex, and a PostgreSQL database to serve data to the frontend. It integrates with Stripe's API to process one-time payments and implements image optimization with WebP conversion utilizing the library called Sharp. The application is deployed on AWS EC2 with PM2 for process management and Nginx as a reverse proxy.
 
 ## Built With
 
