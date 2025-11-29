@@ -69,11 +69,11 @@ git clone https://github.com/alinix1/holistic-health-haven-BE.git
 - Successfully designed and implemented a relational database with PostgreSQL
 - Developed RESTful API routes with Express
 - Integrated Stripe payment processing API
+- Configured AWS EC2 Instance for deployment
 
 ## Challenges:
 
 - Researching and implementing image optimization with WebP conversion from PNG/JPG using the Sharp library
-- Configuring AWS Elastic Beanstalk for deployment
 
 <!-- BACKEND -->
 
@@ -109,7 +109,7 @@ git clone https://github.com/alinix1/holistic-health-haven-BE.git
 
 ## Roadmap
 
-- [ ] AWS deployment
+- [x] AWS deployment
 - [ ] Database schema updates for users and orders
 - [ ] User authentication APIs
 - [ ] Order management APIs
